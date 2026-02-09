@@ -28,8 +28,6 @@
     }
     h1 {
       color: #e63946;
-      font-size: 2em;
-      margin-bottom: 20px;
     }
     button {
       padding: 12px 25px;
@@ -39,31 +37,26 @@
       cursor: pointer;
       margin: 10px;
     }
-    .yes {
-      background: #e63946;
-      color: white;
-    }
-    .no {
-      background: #adb5bd;
-      color: white;
-    }
+    .yes { background: #e63946; color: white; }
+    .no { background: #6c757d; color: white; }
   </style>
 </head>
 <body>
   <div class="card">
     <img src="photo.jpg" alt="Us ❤️">
-    <h1>Will you be my Valentine? 💘</h1>
-    <button class="yes" onclick="yesClicked()">YES ❤️</button>
-    <button class="no" onclick="noClicked()">NO 😜</button>
+    <h1>Willlll you be my Valentine? 💘</h1>
+
+    <button class="yes" onclick="openYes()">YES ❤️</button>
+    <button class="no" onclick="goError()">NO 😜</button>
   </div>
 
   <script>
-    function yesClicked() {
-      alert("YAY!!! 💖 I knew it 😘 Happy Valentine’s Day!");
+    function openYes() {
+      window.open("yes.html", "_blank");
     }
 
-    function noClicked() {
-      yesClicked(); // redirects her to YES anyway 😏
+    function goError() {
+      window.location.href = "error.html";
     }
   </script>
 </body>
